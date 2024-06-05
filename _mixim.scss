@@ -1,7 +1,7 @@
 @mixin BigTitle ($color){
     font-family: $font-f1;
     font-weight: 900;
-    font-size: $size-3;
+    font-size: $size-5;
     color:$color;
     display: inline-block;
-}
+};

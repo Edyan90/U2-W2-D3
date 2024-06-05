@@ -16,6 +16,29 @@ main div div img, body header div:first-child div img {
   width: 100%;
 }
 
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+/* $size-0: 0rem;
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 1rem;
+$size-4: 1.5rem;
+$size-5: 3rem;
+ */
+/* %main-btn{
+  border: none;
+  background-color: lightcyan;
+  color: #f4f4f4;
+  border-radius: $size-4;
+  padding-inline: $size-2;
+}
+
+%main-img{
+  width: 100%;
+} */
 .p-1 {
   padding: 0.75rem;
 }
@@ -116,4 +139,11 @@ header > div div {
     opacity: 1;
     transform: translateY(0);
   }
+}
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: white;
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */

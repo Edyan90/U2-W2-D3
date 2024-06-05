@@ -126,5 +126,5 @@ header>div{
   }
 }
 h1{
-  @import BigTitle (white);
+  @include BigTitle (white);
 }
