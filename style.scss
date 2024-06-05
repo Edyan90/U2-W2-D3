@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+$size-0: 0rem;
+$size-1: 0.25rem;
+$size-2: 0.5rem;
+$size-3: 1rem;
+$size-4: 1.5rem;
+$size-5: 3rem;
+
+%main-btn{
+  border: none;
+  background-color: lightcyan;
+  color: #f4f4f4;
+  border-radius: $size-4;
+  padding-inline: $size-2;
+}
+
+%main-img{
+  width: 100%;
+}
+@for $i from 1 through 5 {
+    .p-#{$i} {
+      padding: calc($i * 0.75rem);
+    }
+}
+@for $i from 1 through 5 {
+  .m-#{$i} {
+    margin: calc($i * 0.75rem);
+  }
+}
+body {
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+      img{
+        width: 50px;
+      }
+      button{
+        @extend %main-btn;
+      }
+      button:nth-child(2){
+        background-color: #0e6cff;
+      }
+      button:nth-child(3){
+        background-color: #ff8700;
+      }
+      button:nth-child(4){
+        background-color: #4caf50;
+      }
+
+    }
+    header{
+       margin: $size-5;
+       background-color: #640fc5;
+       padding: $size-4;
+
+      div:first-child{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        div{
+          display: block;
+        }
+        div{
+          img{
+          @extend %main-img;
+          }
+        }
+      } 
+        
+  }
+}
+
+.footer-title{
+  display: flex;
+  justify-content: center;
+  margin-top: $size-4;
+  button{
+    @extend %main-btn;
+    background-color: complement(#640fc5);
+    margin-inline: $size-1;
+  }
+}
+
+main{
+  margin: $size-5;
+  div{display: flex;
+      gap: 20px;
+    div{
+      img{
+        @extend %main-img;
+      }
+    }
+  }
+}
+
+.grid{
+  display:grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 10px;
+   margin:20px;
+   div{
+   img{
+    width: 100%;
+    height: auto;
+    animation: sideDown 2s ease-in-out forwards;
+   }}
+  }
+
+@keyframes slideDown {
+  0%{
+    transform:translateY(-50px);
+    opacity: 0;
+
+  }100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
