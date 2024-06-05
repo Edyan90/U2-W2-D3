@@ -103,16 +103,8 @@ main div {
   display: flex;
   gap: 20px;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 20px;
-}
-.grid div img {
-  width: 100%;
-  height: auto;
-  animation: sideDown 2s ease-in-out forwards;
+header > div div {
+  animation: slideDown 2s ease-in-out forwards;
 }
 
 @keyframes slideDown {
@@ -121,7 +113,7 @@ main div {
     opacity: 0;
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

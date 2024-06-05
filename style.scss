@@ -1,18 +1,24 @@
-*,
+@import "./reset";
+@import "./fonts";
+@import "./placeholder";
+@import "./mixim";
+
+
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 
-$size-0: 0rem;
+/* $size-0: 0rem;
 $size-1: 0.25rem;
 $size-2: 0.5rem;
 $size-3: 1rem;
 $size-4: 1.5rem;
 $size-5: 3rem;
-
-%main-btn{
+ */
+/* %main-btn{
   border: none;
   background-color: lightcyan;
   color: #f4f4f4;
@@ -22,7 +28,7 @@ $size-5: 3rem;
 
 %main-img{
   width: 100%;
-}
+} */
 @for $i from 1 through 5 {
     .p-#{$i} {
       padding: calc($i * 0.75rem);
@@ -60,7 +66,7 @@ body {
        margin: $size-5;
        background-color: #640fc5;
        padding: $size-4;
-
+       
       div:first-child{
        display: flex;
        justify-content: center;
@@ -101,26 +107,24 @@ main{
   }
 }
 
-.grid{
-  display:grid;
-   grid-template-columns: repeat(2,1fr);
-   gap: 10px;
-   margin:20px;
-   div{
-   img{
-    width: 100%;
-    height: auto;
-    animation: sideDown 2s ease-in-out forwards;
-   }}
-  }
 
+
+header>div{
+  div{
+    animation: slideDown 2s ease-in-out forwards;
+   }
+}
 @keyframes slideDown {
   0%{
     transform:translateY(-50px);
     opacity: 0;
 
   }100%{
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+    
   }
+}
+h1{
+  @import BigTitle (white);
 }
